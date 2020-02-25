@@ -1,0 +1,16 @@
+node_modules
+packages/*/lib
+services/*/lib
+
+.idea
+.DS_Store
+
+*.log
+npm-debug.log*
+
+.eslintcache
+*.tsbuildinfo
+
+.npm
+package-lock.json
+yarn.lock

@@ -1,0 +1,25 @@
+{
+  "name": "web-service",
+  "version": "0.0.0",
+  "description": "Example web service",
+  "author": "Bram Monstrey <monstrey.bram@gmail.com>",
+  "license": "PRIVATE",
+  "main": "lib/index",
+  "types": "lib/index",
+  "private": true,
+  "scripts": {
+    "build": "yarn clean && yarn lint && yarn compile",
+    "clean": "rm -rf ./lib && rm -rf tsconfig.tsbuildinfo",
+    "lint": "eslint './src/**/*.ts' --fix && tsc --noEmit -p .",
+    "start:local": "node lib/server.js",
+    "watch": "tsc -b tsconfig.json -w --preserveWatchOutput",
+    "compile": "tsc -b tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "common": "0.0.0"
+  }
+}

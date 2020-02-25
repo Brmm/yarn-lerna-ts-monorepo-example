@@ -1,0 +1,17 @@
+{
+  "name": "common",
+  "version": "0.0.0",
+  "description": "Common utilities",
+  "author": "Bram Monstrey <monstrey.bram@gmail.com>",
+  "license": "PRIVATE",
+  "main": "lib/index",
+  "types": "lib/index",
+  "private": true,
+  "scripts": {
+    "build": "yarn clean && yarn lint && yarn compile",
+    "clean": "rm -rf ./lib && rm -rf tsconfig.tsbuildinfo",
+    "lint": "eslint './src/**/*.ts' --fix && tsc --noEmit -p .",
+    "watch": "tsc -b tsconfig.json -w --preserveWatchOutput",
+    "compile": "tsc -b tsconfig.json"
+  }
+}
